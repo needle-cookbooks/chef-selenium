@@ -11,6 +11,13 @@ remote_file File.join(node['selenium']['server']['installpath'], 'selenium-serve
   mode 0644
 end
 
+template '/usr/local/bin/runxvfb' do
+  source 'runxvfb.erb'
+  mode 0755
+  owner 'root'
+  group 'root'
+end
+
 user node['selenium']['server']['user']
 
 directory node['selenium']['server']['logpath'] do

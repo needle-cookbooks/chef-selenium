@@ -1,9 +1,4 @@
 #!/bin/bash
 exec 2>&1
 
-DISPLAY=<%= node['selenium']['server']['display'] %>
-FBSIZE=<%= node['selenium']['server']['fbsize'] %>
-
-export DISPLAY FBSIZE
-
-Xvfb "$DISPLAY" -screen 0 "$FBSIZE"
+exec chpst -u <%= node['selenium']['server']['user'] %> /usr/local/bin/runxvfb

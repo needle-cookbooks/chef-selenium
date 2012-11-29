@@ -28,3 +28,7 @@ end
 runit_service 'selenium' do
   action [ :enable, :start ]
 end
+
+runit_service 'xvfb' do
+  action [ :enable, :start ]
+end

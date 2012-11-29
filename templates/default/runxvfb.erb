@@ -11,6 +11,7 @@ FBSIZE=<%= node['selenium']['server']['fbsize'] %>
 
 export DISPLAY
 
+rm -f /tmp/.X<%= node['selenium']['server']['display'] %>.lock
 Xvfb "$DISPLAY" -screen 0 "$FBSIZE" &
 
 cleanup() {

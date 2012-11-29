@@ -26,6 +26,7 @@ directory node['selenium']['server']['logpath'] do
 end
 
 runit_service 'selenium' do
+  env({'DISPLAY'=>':'+node['selenium']['server']['display']})
   action [ :enable, :start ]
 end
 

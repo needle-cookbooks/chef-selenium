@@ -18,13 +18,6 @@ directory node['selenium']['server']['logpath'] do
   recursive true
 end
 
-template '/usr/local/bin/runselenium' do
-  source 'runselenium.erb'
-  mode 0755
-  owner 'root'
-  group 'root'
-end
-
 runit_service 'selenium' do
   action [ :enable, :start ]
 end

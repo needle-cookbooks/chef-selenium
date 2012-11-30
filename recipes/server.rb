@@ -31,5 +31,9 @@ runit_service 'selenium' do
 end
 
 runit_service 'xvfb' do
+  env({
+    'DISPLAY' => ':'+node['selenium']['server']['display'],
+    'FBSIZE' => node['selenium']['server']['fbsize']
+  })
   action [ :enable, :start ]
 end

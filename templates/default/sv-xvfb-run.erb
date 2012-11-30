@@ -1,5 +1,0 @@
-#!/bin/bash
-envdir=$PWD/env
-exec rm -rf /tmp/.X<%= node['selenium']['server']['display']%>
-exec 2>&1 \
-chpst -e $envdir -u <%= node['selenium']['server']['user'] %> /usr/local/bin/runxvfb 2>&1

@@ -1,4 +1,4 @@
-name selenium
+name 'selenium'
 maintainer 'Cameron Johnston'
 maintainer_email 'cameron@needle.com'
 description 'installs components required for running selected flavors of selenium'
